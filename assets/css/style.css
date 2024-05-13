@@ -21,12 +21,17 @@ body {
 .jumbotron {
   background-color: #131212;
   border-radius: 20px;
+  
   height: 520px;
-  background-image:url(/electronic_gadget-master/electronic_gadget-master/assets/camera-3985711.jpg);
-  background-size:cover;
-  background-repeat:repeat;
+  background-image:url("/assets/Google-Pixel-Fold-render-removebg-preview.png");
+  /* background-size:cover; */
+  background-repeat:no-repeat;
+  background-size: 40% auto;
+  background-color: rgba(47, 46, 46, 0.321);
+  
   align-content:center; 
-  background-position : 0px 30px;
+
+  background-position : right 300px;
   
 }
 
@@ -68,8 +73,8 @@ border-radius: 20%;}
   align-self: center;
 }
 .container-fluid{
-  display: grid;
-  justify-content: left;
+  display: left;
+  justify-content: center;
 }
 .center {
   text-align: center;
@@ -84,16 +89,19 @@ border-radius: 20%;}
 .search .input-search {
   background-color: #312c2c71;
   height: 2.2em;
-  width: 18vw;
+  width: 8vw;
+  /* margin-left: 50px; */
+  margin-left: 1em;
   color: #ffffff;
   border-radius: 7px;
 border-spacing: 200%;
 }
 
 .search .no-gap {
-  margin-left: -0.4em;
+  
   border-left: 1px solid #c8b9a2;
   text-indent: 0.3em;
+  width: 40%;
 }
 
 .search button {
@@ -194,10 +202,15 @@ width: 20vw;
 .sec-2 {
   padding-top: 1.5em;
 }
+.card{
+  display: flex;
+}
 
 .col-md-3 .card .card-img-top {
   /* height: 100%; */
   padding: 2em;
+  width: 100%;
+  align-content: center;
   padding-bottom: 1.5em;
 }
 .card-img-top{
@@ -225,7 +238,7 @@ height: 200px;
   color: #ffffff;
 }
 
- /* .card-body  {   */
+ .card-body  {  
   padding-bottom: 1.8em;
 } 
 .card-img-top{
