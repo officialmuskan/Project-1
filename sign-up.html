@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup</title>
+  <link rel="stylesheet" href="assets/css/login.css" />
+</head>
+
+<body>
+  <section id="Sign-in">
+    <div class="Sign-in">
+               
+      <h3><a href="/log-in.html"> Log-in</a></h3>
+      <div class="login_form_container">
+        <div class="login_form">
+          <h2>Register</h2>
+          <form id="login-form">
+            <div class="input_group">
+              <i class="fa fa-user"></i>
+              <input type="text" id="username" name="username" placeholder="Username" class="input_text" autocomplete="off" required />
+            </div>
+            <div class="input_group">
+              <i class="fa fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Email" class="input_text" autocomplete="off" required />
+            </div>
+            <div class="input_group">
+              <i class="fa fa-unlock-alt"></i>
+              <input type="password" id="password" name="password" placeholder="Password" class="input_text" autocomplete="off" required />
+            </div>
+            <div class="button_group" id="login_button">
+              <a id="login-form-submit">Submit</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const loginForm = document.getElementById("login-form");
+    const loginButton = document.getElementById("login-form-submit");
+    const loginErrorMsg = document.getElementById("login-error-msg");
+
+    let users = [];
+
+    
+    if (localStorage.getItem("users")) {
+      users = JSON.parse(localStorage.getItem("users"));
+    }
+
+    loginButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      const username = loginForm.username.value;
+      const email = loginForm.email.value;
+      const password = loginForm.password.value;
+
+      if (username.trim() === "" || email.trim() === "" || password.trim() === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      
+      if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+      }
+
+      
+      if (users.some(user => user.username === username || user.email === email)) {
+        alert("User with this username or email already exists.");
+        return;
+      }
+
+      
+      users.push({ username, email, password });
+      
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Your account is created.");
+      location.reload();
+      window.location.href = "index.html";
+
+    })
+  </script>
+</body>
+
+</html>
