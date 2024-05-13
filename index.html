@@ -30,7 +30,7 @@
                      <li class="nav-item"><a href="searchpage.html" class="nav-link">Collections</a></li>
                      <li class="nav-item"><a href="#" class="nav-link">Purchase List</a></li>
                      <!-- <li class="nav-item"><a href="#" class="nav-link">POST AN AD</a></li> -->
-                     <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-bell fa-lg"></i></a></li>
+                     <li class="nav-item"><a href="#" class="nav-link"><i class="far fa-bell fa-lg"></i><span id="bell-count">0</span></a></li>
                      <li class="nav-item"><a href="/log-in.html" class="nav-link"><i class="far fa-user fa-lg"></i></a></li>
                   </ul>
                </div>
@@ -97,7 +97,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i id="plus-icon" class="far fa-plus-square fa-lg"></i>
                                  </div>
                                  <div class="price">
                                     72,000Rs.
@@ -115,7 +115,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     64,000Rs.
@@ -133,7 +133,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     68,000Rs.
@@ -151,7 +151,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     70,000Rs.
@@ -184,7 +184,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     16,000 Rs.
@@ -202,7 +202,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     84,000 Rs.
@@ -220,7 +220,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                    1,42,000 Rs.
@@ -238,7 +238,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     1,94,000 Rs.
@@ -271,7 +271,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     160,000 Rs.
@@ -289,7 +289,7 @@
                               <!-- <h6> From : Bihar, India</h6> -->
                               <div class="card-foot">
                                  <div class="add">
-                                    <i class="far fa-plus-square fa-lg"></i>
+                                    <i class="far fa-plus-square fa-lg" id="plus-icon"></i>
                                  </div>
                                  <div class="price">
                                     60,000
@@ -414,6 +414,19 @@
          </footer>
       </div>
       <!-- script -->
+      <script>
+         let count = 0;
+         // let count = 0;
+const bellCount = document.getElementById('bell-count');
+const plusIcon = document.getElementById('plus-icon');
+
+plusIcon.addEventListener('click', () => {
+    count++;
+    bellCount.textContent = count;
+});
+
+
+      </script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
          crossorigin="anonymous"></script>
