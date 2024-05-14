@@ -12,6 +12,7 @@ body {
 
 .container {
   max-width: 1366px;
+  
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
@@ -21,17 +22,14 @@ body {
 .jumbotron {
   background-color: #131212;
   border-radius: 20px;
-  
   height: 520px;
-  background-image:url("/assets/Google-Pixel-Fold-render-removebg-preview.png");
-  /* background-size:cover; */
-  background-repeat:no-repeat;
-  background-size: 40% auto;
-  background-color: rgba(47, 46, 46, 0.321);
-  
+  background-image:url(/assets/camera-3985711.jpg);
+  background-size:cover;
+  background-repeat:repeat;
   align-content:center; 
+  background-position : 0px 30px;
+  
 
-  background-position : right 300px;
   
 }
 
@@ -69,12 +67,15 @@ border-radius: 20%;}
 .Heading{
   margin-left: 20%;
   background-color: #00000028;
-  width:70%;
+  width:100%;
   align-self: center;
 }
 .container-fluid{
-  display: left;
-  justify-content: center;
+  display: grid;
+  margin-top: 50px;
+
+
+  justify-content: left;
 }
 .center {
   text-align: center;
@@ -82,8 +83,10 @@ border-radius: 20%;}
 }
 
 .search {
-  margin-top: 2em;
+  margin: 2em;
   height: 4em;
+  margin-left: 20%;
+  width: 40vw;
 }
 
 .search .input-search {
@@ -98,10 +101,10 @@ border-spacing: 200%;
 }
 
 .search .no-gap {
-  
+  /* margin-left: -0.4em; */
   border-left: 1px solid #c8b9a2;
   text-indent: 0.3em;
-  width: 40%;
+  width: 62%;
 }
 
 .search button {
